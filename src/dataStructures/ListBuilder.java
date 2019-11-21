@@ -15,6 +15,10 @@ public class ListBuilder {
         r.setSeed(1234);
     }
 
+    /*
+     * Returns an array of n unique Strings, each consisting
+     * of 25 random characters
+     */
     public String[] getList(int n) {
     	
     	HashSet<String> random_strings = new HashSet<String>();
@@ -32,6 +36,16 @@ public class ListBuilder {
         return ls;
     }
     
+    public String generateString(int n) {
+
+        String s = "";
+        
+        for(int i = 0; i < n; i++) {
+            s += ALPHANUMERIC.charAt(r.nextInt(ALPHANUMERIC.length()));
+        }
+        return s;
+    }
+    
     public void showProgress(int bars) {
     	String progress = "|";
     	for(int i = 0; i < bars; i++) {
@@ -41,15 +55,5 @@ public class ListBuilder {
     		progress += " ";
     	}
     	System.out.print(progress + "|\r");
-    }
-
-    public String generateString(int n) {
-
-        String s = "";
-        
-        for(int i = 0; i < n; i++) {
-            s += ALPHANUMERIC.charAt(r.nextInt(ALPHANUMERIC.length()));
-        }
-        return s;
     }
 }

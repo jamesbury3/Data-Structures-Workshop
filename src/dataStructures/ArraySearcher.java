@@ -6,10 +6,15 @@ public class ArraySearcher {
 	private String target;
 	
 	public ArraySearcher(String[] ls) {
+		
 		this.ls = ls;
 		target = ls[ls.length - 1];
 	}
 
+	/*
+	 * Looks for the last item in the original array
+	 * then prints out search time
+	 */
 	public void findItem() {
 		long start = System.nanoTime();
 		boolean found = false;

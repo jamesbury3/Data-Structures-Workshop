@@ -73,17 +73,4 @@ public class BSTNode {
 			return false;
 		}
 	}
-	
-	public BSTNode printTree(BSTNode node) {
-		BSTNode curr = node;
-		System.out.println(curr.value + " ");
-		if(curr.left != null) {
-			
-			return printTree(curr.left);
-		}
-		if (curr.right != null) {
-			return printTree(curr.left);
-		}
-		return null;
-	}
 }
